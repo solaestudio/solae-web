@@ -134,7 +134,7 @@ function WhatWeDo() {
         <ScrollReveal
           className="pt-10 pl-0 md:pl-16 pb-10"
           delay={100}
-          style={{ borderLeft: '0.5px solid #6b5645' } as React.CSSProperties}
+          style={{ borderLeft: '0.5px solid #6b5645' }}
         >
           <p className="eyebrow mb-5" style={{ color: '#c8b89e' }}>The Academy</p>
           <h3
