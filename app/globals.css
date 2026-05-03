@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #2e231d;
+    color: #e5e0d4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #2e231d;
+    color: #e5e0d4;
+  }
+
+  /* Remove default margins from headings */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  /* Hairline horizontal rule */
+  hr {
+    border: none;
+    border-top: 0.5px solid #6b5645;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .divider {
+    border-top: 0.5px solid #6b5645;
+  }
+
+  .divider-b {
+    border-bottom: 0.5px solid #6b5645;
+  }
+
+  /* Page fade-in transition */
+  .page-transition {
+    animation: pageFadeIn 500ms ease-in-out forwards;
+  }
+
+  /* Scroll reveal — initial hidden state; JS applies the reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 700ms ease-out, transform 700ms ease-out;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    font-family: var(--font-inter), 'Helvetica Neue', system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c8b89e;
+  }
+
+  /* Field underline-only form input */
+  .field {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #6b5645;
+    color: #e5e0d4;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 14px;
+    padding: 8px 0;
+    width: 100%;
+    outline: none;
+    transition: border-color 300ms ease-out;
+  }
+
+  .field:focus {
+    border-bottom-color: #c8b89e;
+  }
+
+  .field::placeholder {
+    color: transparent;
+  }
+
+  /* Button base */
+  .btn-primary {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #c8b89e;
+    border-radius: 2px;
+    color: #e5e0d4;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    transition: background-color 300ms ease-out, color 300ms ease-out;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #c8b89e;
+    color: #2e231d;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #c8b89e;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 300ms ease-out;
+  }
+
+  .btn-secondary:hover {
+    opacity: 0.85;
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
