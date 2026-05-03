@@ -1,12 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
+
 import ScrollReveal from '@/components/ScrollReveal'
 import Button from '@/components/Button'
-
-export const metadata: Metadata = {
-  title: 'The Studio',
-  description:
-    'Solae Studio — a UGC agency and creator academy built for the products you can\'t put on a shelf.',
-}
 
 // ─── Page hero ─────────────────────────────────────────────────────────────────
 function StudioHero() {

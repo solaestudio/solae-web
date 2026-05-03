@@ -1,12 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
+
 import ScrollReveal from '@/components/ScrollReveal'
 import Button from '@/components/Button'
-
-export const metadata: Metadata = {
-  title: 'Work With Us',
-  description:
-    'Four engagement models for Canvas UGC campaigns. Strategic Consulting, Infrastructure Build, Full Campaign Management, and Ad Translation.',
-}
 
 const SECTION_PAD = 'py-24 lg:py-32'
 

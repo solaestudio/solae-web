@@ -1,12 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
+
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactForm from './ContactForm'
-
-export const metadata: Metadata = {
-  title: 'Contact',
-  description:
-    'Start a conversation with Solae Studio. We respond within two business days.',
-}
 
 export default function ContactPage() {
   return (

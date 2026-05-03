@@ -1,13 +1,8 @@
-import type { Metadata } from 'next'
+'use client'
+
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 import Button from '@/components/Button'
-
-export const metadata: Metadata = {
-  title: 'Solae Studio',
-  description:
-    'Canvas UGC marketing for software, services, and the products you can\'t put on a shelf.',
-}
 
 // ─── Section spacing constants ────────────────────────────────────────────────
 const SECTION_PAD = 'py-24 lg:py-32'

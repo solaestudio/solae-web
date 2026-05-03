@@ -1,12 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
+
 import ScrollReveal from '@/components/ScrollReveal'
 import Button from '@/components/Button'
-
-export const metadata: Metadata = {
-  title: 'Canvas UGC — The Method',
-  description:
-    'A microinfluencer system built on owned ground. 2,160 owned videos in 90 days — native to the For You Page.',
-}
 
 const SECTION_PAD = 'py-24 lg:py-32'
 

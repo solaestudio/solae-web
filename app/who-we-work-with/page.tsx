@@ -1,12 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
+
 import ScrollReveal from '@/components/ScrollReveal'
 import Button from '@/components/Button'
-
-export const metadata: Metadata = {
-  title: 'Who We Work With',
-  description:
-    'Solae specializes in intangible-product categories — AI, SaaS, tech, financial services, and service-based businesses.',
-}
 
 const SECTION_PAD = 'py-24 lg:py-32'
 
