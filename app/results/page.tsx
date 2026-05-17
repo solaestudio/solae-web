@@ -11,17 +11,17 @@ const dashboards = [
   {
     platform: "TikTok",
     index: "01",
-    src: "https://datastudio.google.com/embed/reporting/37b8488d-5fab-467a-9879-a4b7768601da/page/dGY5C",
+    src: "https://datastudio.google.com/embed/reporting/37b8488d-5fab-467a-9879-a4b7768601da/page/dGY5C?pageNavigation=false",
   },
   {
     platform: "Instagram",
     index: "02",
-    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/dGY5C",
+    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/dGY5C?pageNavigation=false",
   },
   {
     platform: "YouTube",
     index: "03",
-    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/p_hi22235o3d",
+    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/p_hi22235o3d?pageNavigation=false",
   },
 ];
 
