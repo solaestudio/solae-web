@@ -11,17 +11,17 @@ const dashboards = [
   {
     platform: "TikTok",
     index: "01",
-    src: "https://datastudio.google.com/embed/reporting/37b8488d-5fab-467a-9879-a4b7768601da/page/dGY5C?pageNavigation=false",
+    src: "https://datastudio.google.com/embed/reporting/37b8488d-5fab-467a-9879-a4b7768601da/page/dGY5C",
   },
   {
     platform: "Instagram",
     index: "02",
-    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/dGY5C?pageNavigation=false",
+    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/dGY5C",
   },
   {
     platform: "YouTube",
     index: "03",
-    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/p_hi22235o3d?pageNavigation=false",
+    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/p_hi22235o3d",
   },
 ];
 
@@ -67,10 +67,10 @@ export default function ResultsPage() {
               </span>
             </div>
 
-            <div className="w-full bg-white border border-black/10">
+            <div className="w-full bg-white border border-black/10 overflow-hidden h-[600px] md:h-[900px]">
               <iframe
                 src={dash.src}
-                className="w-full h-[600px] md:h-[900px] border-0 block"
+                className="w-full h-[660px] md:h-[960px] border-0 block -mt-[60px]"
                 allowFullScreen
                 sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               />
