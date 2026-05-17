@@ -1,11 +1,10 @@
-export const metadata = {
-  title: "Solae Studio — Canvas UGC Performance",
-  description: "Live performance data across TikTok, Instagram, and YouTube.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+"use client";
+
+import { useState, useEffect } from "react";
+
+const PASSWORD = "solae2026";
+
+export const dynamic = "force-dynamic";
 
 const dashboards = [
   {
@@ -26,11 +25,93 @@ const dashboards = [
 ];
 
 export default function ResultsPage() {
+  const [unlocked, setUnlocked] = useState(false);
+  const [input, setInput] = useState("");
+  const [error, setError] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window !== "undefined" && sessionStorage.getItem("solae_unlocked") === "true") {
+      setUnlocked(true);
+    }
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (input === PASSWORD) {
+      setUnlocked(true);
+      setError(false);
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("solae_unlocked", "true");
+      }
+    } else {
+      setError(true);
+    }
+  };
+
+  if (!mounted) return null;
+
+  if (!unlocked) {
+    return (
+      <main className="min-h-screen bg-[#F4F1EA] text-[#0F0F0E] flex items-center justify-center px-6">
+        <div className="w-full max-w-md">
+          <div className="border-b border-[#0F0F0E] pb-8 mb-12">
+            <p className="text-[11px] uppercase tracking-[0.25em] text-neutral-500 mb-4">
+              Solae Studio
+            </p>
+            <h1 className="text-3xl md:text-4xl font-medium uppercase tracking-tight leading-tight">
+              Client Portal
+            </h1>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-[11px] uppercase tracking-[0.2em] text-neutral-500 mb-3"
+              >
+                Access Code
+              </label>
+              <input
+                id="password"
+                type="password"
+                value={input}
+                onChange={(e) => {
+                  setInput(e.target.value);
+                  setError(false);
+                }}
+                className="w-full bg-transparent border-b border-[#0F0F0E] py-3 text-lg focus:outline-none focus:border-[#0F0F0E] placeholder:text-neutral-400"
+                placeholder="Enter code"
+                autoFocus
+              />
+              {error && (
+                <p className="mt-3 text-[11px] uppercase tracking-[0.15em] text-red-700">
+                  Incorrect code — please try again
+                </p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-[#0F0F0E] text-[#F4F1EA] py-4 text-[11px] uppercase tracking-[0.25em] hover:opacity-90 transition-opacity"
+            >
+              Enter
+            </button>
+          </form>
+
+          <p className="mt-12 text-[11px] uppercase tracking-[0.15em] text-neutral-500 text-center">
+            For authorized access only
+          </p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-[#F4F1EA] text-[#0F0F0E]">
       <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-24">
 
-        {/* MASTHEAD */}
         <header className="flex items-end justify-between border-b border-[#0F0F0E] pb-8 mb-24">
           <div className="font-serif text-2xl tracking-wide">Solae Studio</div>
           <div className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
@@ -38,7 +119,6 @@ export default function ResultsPage() {
           </div>
         </header>
 
-        {/* TITLE BLOCK */}
         <section className="mb-32 max-w-3xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-neutral-500 mb-8">
             Canvas UGC — Performance Report
@@ -52,7 +132,6 @@ export default function ResultsPage() {
           </p>
         </section>
 
-        {/* DASHBOARDS */}
         {dashboards.map((dash) => (
           <section
             key={dash.platform}
@@ -78,7 +157,6 @@ export default function ResultsPage() {
           </section>
         ))}
 
-        {/* FOOTER */}
         <footer className="flex items-baseline justify-between border-t border-[#0F0F0E] pt-8">
           <div className="font-serif text-lg">Solae Studio</div>
           <div className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">
