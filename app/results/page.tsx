@@ -109,22 +109,22 @@ export default function ResultsPage() {
       <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-12 md:py-24">
 
         <header className="flex items-end justify-between border-b border-[#0F0F0E] pb-8 mb-24">
-          <div className="font-serif text-2xl tracking-wide">Solae Studio</div>
+          <div className="font-serif text-2xl tracking-wide">Teemdrop</div>
           <div className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
-            Q2 · 2026
+           June 21-28, 2026
           </div>
         </header>
 
         <section className="mb-32 max-w-3xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-neutral-500 mb-8">
-            Canvas UGC — Performance Report
+           TEEMDROP - CREATOR PERFORMANCE REPORT 
           </p>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-medium uppercase leading-[0.95] tracking-tight mb-8">
-            The<br />numbers,<br />uncut.
+            Teemdrop,<br />in motion.
           </h1>
           <p className="text-lg leading-relaxed text-neutral-700 max-w-xl">
-            A live look at how Canvas UGC creators are performing across TikTok and
-            Instagram. Data refreshes daily.
+            A live look at how Teemdrop's Canvas UGC creators are performing across TikTok and
+            Instagram. Data refreshes weekly. 
           </p>
         </section>
 
