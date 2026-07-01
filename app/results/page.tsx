@@ -120,7 +120,7 @@ export default function ResultsPage() {
            TEEMDROP - CREATOR PERFORMANCE REPORT 
           </p>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-medium uppercase leading-[0.95] tracking-tight mb-8">
-            Teemdrop,<br />in motion.
+            Teemdrop<br />Dashboard.
           </h1>
           <p className="text-lg leading-relaxed text-neutral-700 max-w-xl">
             A live look at how Teemdrop's Canvas UGC creators are performing across TikTok and
