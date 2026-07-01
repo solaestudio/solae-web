@@ -17,11 +17,7 @@ const dashboards = [
     index: "02",
     src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/dGY5C",
   },
-  {
-    platform: "YouTube",
-    index: "03",
-    src: "https://datastudio.google.com/embed/reporting/f98e6f00-c825-4df0-a4e4-610a7136a141/page/p_hi22235o3d",
-  },
+ 
 ];
 
 export default function ResultsPage() {
