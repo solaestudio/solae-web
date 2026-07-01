@@ -123,8 +123,8 @@ export default function ResultsPage() {
             The<br />numbers,<br />uncut.
           </h1>
           <p className="text-lg leading-relaxed text-neutral-700 max-w-xl">
-            A live look at how Canvas UGC creators are performing across TikTok,
-            Instagram, and YouTube. Data refreshes daily.
+            A live look at how Canvas UGC creators are performing across TikTok and
+            Instagram. Data refreshes daily.
           </p>
         </section>
 
@@ -138,7 +138,7 @@ export default function ResultsPage() {
                 {dash.platform}
               </h2>
               <span className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
-                {dash.index} / 03
+                {dash.index} / 02
               </span>
             </div>
 
