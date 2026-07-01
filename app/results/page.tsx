@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const PASSWORD = "solae2026";
+const PASSWORD = "teemdrop2026";
 
 export const dynamic = "force-dynamic";
 
